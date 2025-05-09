@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class day4 {
     public static void main(String[] args){
         System.out.println("Hello, World!");
@@ -69,6 +72,33 @@ public class day4 {
             System.out.println();
         }
         System.out.println("--------------------------------------");
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of elements in the array: ");
+        int n = sc.nextInt();
+        System.out.println("Enter the elements of the array: ");
+        int arr[] = new int[n];
+        int sum = 0;
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+            sum = sum + arr[i];
+        }
+
+        System.out.println("Enter the number of elements in the array: ");
+        int n2 = sc.nextInt();
+        System.out.println("Enter the elements of the array: ");
+        int arr2[] = new int[n2];
+        int sum2 = 0;
+        for(int i=0; i<n2; i++){
+            arr2[i] = sc.nextInt();
+            sum2 = sum2 + arr2[i];
+        }
+        if(sum == sum2 && arr.length == arr2.length){
+            System.out.println("Same");
+        }else{
+            System.out.println("Not Same");
+        }
 
     }
 }
