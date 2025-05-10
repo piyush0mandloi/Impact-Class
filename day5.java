@@ -1,6 +1,8 @@
 
 import java.util.Scanner;
 
+
+
 public class day5 {
     public static void main(String[] args) {
         // *******   1
@@ -11,55 +13,84 @@ public class day5 {
         // *         6
         // *         7
 
-        for(int i=1; i<=7; i++){
-            if(i==1 || i==4){
-                for(int j=1; j<=7; j++){
-                    System.out.print("*");
-                }
-            }else if(i==2 || i==3){
-                System.out.print("*");
-                for(int j=1; j<=5; j++){
-                    System.out.print(" ");
-                }
-                System.out.print("*");
-            }else if(i==5 || i==6 || i==7){
-                System.out.print("*");
-                for(int j=1; j<=6; j++){
-                    System.out.print(" ");
-                }                
-            }
-            System.out.println();
-        }
+        // for(int i=1; i<=7; i++){
+        //     if(i==1 || i==4){
+        //         for(int j=1; j<=7; j++){
+        //             System.out.print("*");
+        //         }
+        //     }else if(i==2 || i==3){
+        //         System.out.print("*");
+        //         for(int j=1; j<=5; j++){
+        //             System.out.print(" ");
+        //         }
+        //         System.out.print("*");
+        //     }else if(i==5 || i==6 || i==7){
+        //         System.out.print("*");
+        //         for(int j=1; j<=6; j++){
+        //             System.out.print(" ");
+        //         }                
+        //     }
+        //     System.out.println();
+        // }
 
-        System.out.println("--------------------------------------");
+        // System.out.println("--------------------------------------");
 
-        Scanner scanner = new Scanner(System.in);
-        int n1 = scanner.nextInt();
-        int n2 = scanner.nextInt();
-        int arr1[] = new int[n1];
-        int arr2[] = new int[n2];
-        System.out.println("Enter the elements of the first array:");
-        for(int i=0; i<n1; i++){
-            arr1[i] = scanner.nextInt();
-        }
-        System.out.println("Enter the elements of the second array:");
-        for(int i=0; i<n2; i++){
-            arr2[i] = scanner.nextInt();
-        }
+        // Scanner scanner = new Scanner(System.in);
+        // int n1 = scanner.nextInt();
+        // int n2 = scanner.nextInt();
+        // int arr1[] = new int[n1];
+        // int arr2[] = new int[n2];
+        // System.out.println("Enter the elements of the first array:");
+        // for(int i=0; i<n1; i++){
+        //     arr1[i] = scanner.nextInt();
+        // }
+        // System.out.println("Enter the elements of the second array:");
+        // for(int i=0; i<n2; i++){
+        //     arr2[i] = scanner.nextInt();
+        // }
 
-        int x = 1;
-        for(int i=0; i<arr1.length; i++){
-            if((arr1[i] >= arr2[i]) && arr1.length == arr2.length){
-                x = 1;
+        // int x = 1;
+        // for(int i=0; i<arr1.length; i++){
+        //     if((arr1[i] >= arr2[i]) && arr1.length == arr2.length){
+        //         x = 1;
+        //     }else{
+        //         x=0;
+        //     }
+        // }
+        // if(x==1){
+        //     System.out.println("Compatible");
+        // }else{
+        //     System.out.println("Not Compatible");
+        // }
+
+        Scanner sc = new Scanner(System.in);
+        int n = 4;
+        int arr[] = new int[n];
+        System.out.println("Enter the elements of the array: ");
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Enter the Position");
+        int pos = sc.nextInt();
+        System.out.println("Enter the element to be inserted");
+        int ele = sc.nextInt();
+        int newArr[] = new int[n+1];
+        for(int i=0; i<newArr.length; i++){
+            if(i<pos){
+                newArr[i] = arr[i];
+            }else if(i==pos){
+                newArr[i] = ele;
             }else{
-                x=0;
+                newArr[i] = arr[i-1];
             }
         }
-        if(x==1){
-            System.out.println("Compatible");
-        }else{
-            System.out.println("Not Compatible");
+
+        System.out.println("New Array: ");
+        for(int i=0; i<newArr.length; i++){
+            System.out.print(newArr[i] + " ");
         }
+        
+
 
     }
 }
