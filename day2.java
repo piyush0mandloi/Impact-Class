@@ -1,10 +1,9 @@
 
-import java.util.Scanner;
 
 public class day2 {
     public static void main(String args[]){
         System.out.println("Hello");
-        Scanner sc = new Scanner(System.in);
+        // Scanner sc = new Scanner(System.in);
         // int n = sc.nextInt();
         // int first = n/100;
         // int second = (n/10)%10;
@@ -13,7 +12,7 @@ public class day2 {
         // System.out.println(res);
 
 
-        int x = sc.nextInt();
+        // int x = sc.nextInt();
         // if (x%2==0 && x/10==0 && x!=0){
         //     System.out.println("Even");
         // }
