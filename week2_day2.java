@@ -13,5 +13,7 @@ public class week2_day2 {
             }
         }
         System.out.println(count);
+
+        
     }
 }
