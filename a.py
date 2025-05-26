@@ -141,21 +141,49 @@
 #     print(row)
 
 
-matrix = [
-    [0,0,0],
-    [6,0,0],
-    [1,2,0]
-]
-check = True
-for i in range(len(matrix)):
-    for j in range(len(matrix[0])):
-        if i==j or i<j:
-            if matrix[i][j] == 0:
-                check = True
-            else:
-                check = False
-                break
-if check:
-    print("Upper Triangular Matrix")
-else:   
-    print("Not Upper Triangular Matrix")
+# matrix = [
+#     [0,0,0],
+#     [6,0,0],
+#     [1,2,0]
+# ]
+# check = True
+# for i in range(len(matrix)):
+#     for j in range(len(matrix[0])):
+#         if i==j or i<j:
+#             if matrix[i][j] == 0:
+#                 check = True
+#             else:
+#                 check = False
+#                 break
+# if check:
+#     print("Upper Triangular Matrix")
+# else:   
+#     print("Not Upper Triangular Matrix")
+
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+# max_ele = 0
+# res = []
+# for i in range(len(matrix)):
+#     for j in range(len(matrix[0])):
+#         max_ele = max(max_ele, matrix[i][j])
+#     res.append(max_ele)
+# print(res)
+
+
+# Insertion Sort
+def insertion_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_index = i
+        for j in range(i+1, n):
+            if arr[j]<arr[min_index]:
+                min_index = j
+        arr[i],arr[min_index] = arr[min_index], arr[i]
+    return arr
+
+arr = [64, 25, 12, 22, 11]  
+print(insertion_sort(arr))
